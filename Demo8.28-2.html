@@ -1,0 +1,175 @@
+<!DOCTYPE html><!-- 不是一个标签，声明了编写页面所使用的语言以及版本号 -->
+<html lang="en"><!-- 页面的根元素 -->
+<head><!-- 定义页面的标题 -->
+	<meta charset="UTF-8"><!-- UTF-8编码格式 -->
+	<title>WUIF1701-2</title><!-- 定义网页的标题 -->
+	<!-- 和页面相关的设置的内容，不会显示在页面中 -->
+	<!-- <link rel="stylesheet" href="css/Demo8.28-2.css"> -->
+<!-- 	<link rel="stylesheet" href="../../移动端练习/css/bass.css"> -->
+	<style>
+	*{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	img{
+		width: 100%;
+		height: 100%;
+	}
+	body{
+		background-color: #000;
+	}
+	.scene{
+		width: 500px;
+		height: 500px;
+		margin: 0 auto;
+		margin-top: 150px;
+		/* 设置观察者的角度 */
+		perspective-origin: top left;
+		/* 设置观察者的位置 */
+		perspective: 1080px;
+
+	}
+	.scene ul{
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		margin-top: 150px;
+		position: relative;
+		transform-style: preserve-3d;
+		transition: all 3s ease;
+	}
+	.scene ul li{
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.scene:hover .z{
+		transform: translateX(-100px) rotateY(90deg);
+		/* background-color: red; */
+		box-shadow: 0 0 10px 15px #fff;
+		transition: all 3s ease;
+	}
+	.scene:hover .y{
+		transform: translateX(100px) rotateY(90deg);
+		/* background-color: blue; */
+		box-shadow: 0 0 10px 15px #fff;
+		transition: all 3s ease;
+	}
+	.scene:hover .s{
+		transform: translateY(-100px) rotateX(90deg);
+		/* background-color: orangered; */
+		box-shadow: 0 0 10px 15px #fff;
+		transition: all 3s ease;
+	}
+	.scene:hover .x{
+		transform: translateY(100px) rotateX(90deg);
+		/* background-color: yellow; */
+		box-shadow: 0 0 10px 15px #fff;
+		transition: all 3s ease;
+	}
+	.scene:hover .h{
+		transform: translateZ(-100px);
+		/* background-color: yellowgreen; */
+		box-shadow: 0 0 10px 15px #fff;
+		transition: all 3s ease;
+	}
+	.scene:hover .q{
+		transform: translateZ(100px);
+		/* background-color: pink; */
+		box-shadow: 0 0 10px 15px #fff;
+		transition: all 3s ease;
+	}
+	.scene ul:hover{
+		transform: rotate3d(1, 1, 0, 360deg)
+	}
+	img{
+		opacity: 0;
+	}
+	.scene:hover img{
+		opacity: 1;
+	}
+	</style>
+</head>
+
+<body>
+<div class="scene">
+		<ul>
+			<li class="z"><img src="img/1.jpg" alt=""></li>
+			<li class="y"><img src="img/2.jpg" alt=""></li>
+			<li class="q"><img src="img/3.jpg" alt=""></li>
+			<li class="h"><img src="img/4.jpg" alt=""></li>
+			<li class="s"><img src="img/5.jpg" alt=""></li>
+			<li class="x"><img src="img/6.jpg" alt=""></li>
+		</ul>
+			
+	</div>
+	<!-- <iframe src="http://www.baidu.com" frameborder="0" width="40%" height="500px" scrolling="auto"></iframe>
+	<iframe src="http://www.4399.com" frameborder="0" width="40%" height="500px" scrolling="yes">
+		
+	</iframe>
+	<iframe src="http://www.tx.com" frameborder="0" width="40%" height="500px" scrolling="no">
+		
+	</iframe> -->
+	<!-- scrolling有三个属性：auto自动、yes有滚动条、no没有滚动条
+
+	name属性：编辑名字，方便其他页面引用当前窗口 -->
+	
+</body>
+</html>
+<!-- 十二栅格系统
+快速实现响应式布局
+每一个屏幕等比分成12份
+预定义类
+
+匹配：三个终端、四个屏幕大小：
+pc端大屏   >1200px   1170px
+
+pc端小屏   992<screen<1200px   970
+
+平板端   768<screen<992px    752
+
+手机端   screen<768px    736 
+
+.container   固定宽度
+.container-fluid   100%	宽度
+.row  行
+.col-  列
+
+
+.container-fluid{
+	width；100%；
+	heigth:auto:
+	overflow:hidden
+}
+.container{
+	height: auto;
+	overflow:didden;
+	margin:0 atuo;
+}
+}
+pd端大屏>1200px   1170px
+@media screen and (min-width:1200px){
+	.container{
+	width:1170%;
+}
+pc端小屏   992<screen<1200px   
+@media screen and (min-width:992px) and (max-width:1200px){
+	.container{
+	width:970px;
+	}
+}
+平板端   768<screen<992px    752
+@media screen and (min-width:768px) and (max-width:992px){
+	.container{
+	width:750px;
+	}
+}
+手机端   screen<768px    736 
+@media screen and (max-width:768px){
+	.container{
+	padding: 0 24px;
+	}
+} -->
